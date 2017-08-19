@@ -14,14 +14,11 @@ Users can use the slider to choose the speed and the app will give two predictio
 Also users can choose whether to present two model fitting through the checkboxes.
 
 
-- Bullet 1
-- Bullet 2
-- Bullet 3
 
 The access to the app
 ========================================================
 Users can access the app in this github repo:
-<https://github.com/lynn9691/CourseProjectDataProducts>.
+<https://lynn9691.shinyapps.io/CourseProject/>.
 
 
 The dataset used to train models

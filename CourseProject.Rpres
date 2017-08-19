@@ -1,0 +1,46 @@
+Developing Data Products Course Project
+========================================================
+author: Yu Wang
+date: 2017/8/19
+autosize: true
+
+Introduction to the App
+========================================================
+
+This is an app which predicts the stopping distance of a car driving at a specific speed.
+
+Users can use the slider to choose the speed and the app will give two predictions.
+
+Also users can choose whether to present two model fitting through the checkboxes.
+
+
+- Bullet 1
+- Bullet 2
+- Bullet 3
+
+The access to the app
+========================================================
+Users can access the app in this github repo:
+<https://github.com/lynn9691/CourseProjectDataProducts>.
+
+
+The dataset used to train models
+========================================================
+```{r}
+summary(cars)
+```
+
+The two models used
+========================================================
+
+```{r, echo=FALSE}
+plot(cars$speed, cars$dist)
+cars$speed2 <- cars$speed ^ 2
+model1 <- lm(dist ~ speed, data = cars)
+model2 <- lm(dist ~ speed + speed2, data = cars)
+abline(model1, col = "red", lwd = 2)
+model2lines <- predict(model2, newdata = data.frame(
+                speed = 0:30, speed2 = (0:30)^2
+            ))
+lines(0:30, model2lines, col = "blue", lwd = 2)
+```
